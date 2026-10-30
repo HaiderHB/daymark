@@ -1,0 +1,56 @@
+DAYMARK — Your time, in perspective.
+
+Windows 10 (19041+) / Windows 11, x64. No separate .NET runtime required.
+
+QUICK START
+1. Extract the complete ZIP into a folder.
+2. Run Daymark.exe. Open the green Daymark icon in your system tray.
+3. For installation and startup, right-click install.ps1 and Run with PowerShell,
+   or run: powershell -ExecutionPolicy Bypass -File .\install.ps1
+   This copies Daymark to %LOCALAPPDATA%\Programs\Daymark, creates a Start menu
+   shortcut, and enables startup for your Windows account. No admin required.
+4. Review app categories and the AFK threshold in Settings.
+
+CHROME / VIVALDI / EDGE / BRAVE EXTENSION
+1. Open your browser's extensions page, e.g. chrome://extensions.
+2. Enable Developer mode. Choose Load unpacked.
+3. Select the extension folder from the installed Daymark folder (or extracted ZIP).
+4. Open the extension options. Choose your browser.
+5. Copy the browser pairing key from Daymark Settings and paste it in the extension.
+6. Click Connect, then Grant allowed sites. Reload any already-open allowed tabs.
+
+Only domains you allow are recorded. Chrome starts with YouTube and Twitch.
+Vivaldi and Cursor window-title capture is separately enabled in Settings and
+includes visible titles outside that website allowlist. Disable either if unwanted.
+Adding a domain requires granting it in the extension as well.
+Removing one in Daymark stops collection immediately. Existing history stays.
+
+AI TASK ACTIVITY
+Run install-ai-hooks.ps1 from this folder to connect Claude Code and Codex.
+Restart coding sessions, and review/trust the hooks in Codex's hooks UI.
+Existing unrelated hooks are preserved with backups. No prompt/answer text is saved.
+Browser AI controls need explicit chatgpt.com and claude.ai host grants and are
+experimental. Ordinary Claude/ChatGPT desktop chat run-state is not supported.
+Missing or expired signals display Unknown. AI time is separate from your work time.
+
+USING DAYMARK
+- Closing the browser dashboard does not stop tracking.
+- Use the tray menu to pause, resume, open your data folder, or quit.
+- The dashboard includes an explicitly labelled sample-data mode.
+- App category changes apply to historical reports.
+- Unknown apps remain Unsorted. Categorize them from Apps & websites or Settings.
+- Data stays in %LOCALAPPDATA%\Daymark. Back it up with Daymark quit.
+
+UNINSTALL
+Quit Daymark from the tray, then run uninstall.ps1. Your history is preserved.
+Delete %LOCALAPPDATA%\Daymark yourself if you also want to erase your data.
+Remove the extension in your browser's extensions page.
+
+LIMITATIONS
+This early release is unsigned, so Windows may show a publisher warning.
+It measures foreground app activity, not actual cognitive work. Reading or
+thinking may look idle. Media detection depends on Windows/app integration
+or the paired extension. A video left playing can still count as active.
+Very short app switches may fall between the five-second samples.
+Games outside common library folders may need a manual Personal rule.
+No cloud account, telemetry, automatic updates, or browser-store install required.

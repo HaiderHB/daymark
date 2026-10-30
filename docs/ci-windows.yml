@@ -1,0 +1,32 @@
+name: Build and verify
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: dotnet test tests/Daymark.Tests -c Release
+      - run: npm test
+      - run: npx playwright install chromium
+      - run: npm run test:ui
+      - run: npm run test:extension
+      - run: ./scripts/build.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Daymark-win-x64
+          path: artifacts/Daymark-win-x64.zip
+          if-no-files-found: error

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Daymark · Allowed sites only",
+  "version": "0.1.0",
+  "description": "Send only approved foreground website domains and media activity to your local Daymark tracker.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "options_page": "options.html",
+  "action": { "default_title": "Connect Daymark" }
+}

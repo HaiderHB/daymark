@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Connect Daymark</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <div class="mark">▥</div>
+      <h1>A little browser perspective.</h1>
+      <p>
+        Connect to Daymark on this PC. Only domains on your allowlist are sent, with no page titles, paths or
+        browsing history.
+      </p>
+      <label
+        >This browser<select id="browser">
+          <option value="chrome">Google Chrome</option>
+          <option value="vivaldi">Vivaldi</option>
+          <option value="msedge">Microsoft Edge</option>
+          <option value="brave">Brave</option>
+        </select></label
+      ><label
+        >Pairing key<input
+          type="password"
+          id="token"
+          placeholder="Paste from Daymark → Settings"
+          autocomplete="off" /></label
+      ><button id="connect">1. Connect to Daymark</button
+      ><button id="grant" disabled>2. Grant allowed sites</button>
+      <div id="status" role="status">Your tracker must be running to connect.</div>
+      <h2>Your allowed domains</h2>
+      <ul id="sites"></ul>
+      <small
+        >After granting sites, reload any already-open tabs. Add or remove sites in the desktop dashboard,
+        then connect again to sync. Removing a site in Daymark stops collection immediately.</small
+      >
+    </main>
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

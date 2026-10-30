@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font:
+    14px 'Segoe UI',
+    sans-serif;
+  background: #f6f8f1;
+  color: #264532;
+  margin: 0;
+  padding: 55px 20px;
+}
+main {
+  max-width: 490px;
+  margin: auto;
+  padding: 35px;
+  background: white;
+  border: 1px solid #e0e7d8;
+  border-radius: 16px;
+}
+.mark {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background: #204b35;
+  color: #c9e5a2;
+  border-radius: 12px;
+  font-size: 26px;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 550;
+  letter-spacing: -0.7px;
+  margin: 22px 0 10px;
+}
+p,
+small {
+  color: #829378;
+  line-height: 1.8;
+}
+label {
+  display: block;
+  font-size: 12px;
+  margin-top: 20px;
+}
+input,
+select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px;
+  border: 1px solid #dce5d2;
+  border-radius: 6px;
+  font: inherit;
+  background: #fcfdf9;
+  color: #39572c;
+}
+button {
+  width: 100%;
+  background: #2c6846;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #a0c789;
+  outline-offset: 2px;
+}
+#grant {
+  background: #e5eedb;
+  color: #4d6b37;
+}
+#status {
+  font-size: 12px;
+  padding: 16px 0;
+  color: #6e855c;
+  line-height: 1.7;
+}
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+}
+li {
+  font-size: 12px;
+  line-height: 2;
+  color: #718567;
+}
+small {
+  font-size: 11px;
+}

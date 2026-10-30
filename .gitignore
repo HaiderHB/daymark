@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+artifacts/
+node_modules/
+test-results/
+*.db
+*.db-*
+settings.json
+*.log
+.env*
+.vs/
+.DS_Store
