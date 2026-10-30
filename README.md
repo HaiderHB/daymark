@@ -109,6 +109,10 @@ npm run test:extension
 
 `build.ps1` produces `artifacts/Daymark-win-x64.zip`. Pass `-Dotnet <path>` to use a local SDK. UI smoke tests launch an isolated paused instance on port 43128 and a headless browser; they never change the normal instance's history or startup setting. Build before running the UI tests after source changes.
 
+The initial release passed 16 .NET tests, 16 Node tests, a real-server dashboard/hook smoke test, an MV3 extension fixture test, and installer preservation/idempotency checks on Windows. The extension fixture verifies its pipeline against simulated generation controls; it is not a guarantee that live AI websites retain those controls. The self-contained release also passed the dashboard smoke test. A short 20-second background sample on the development PC measured 79 MB working set, 15.4 MB private memory, and 0.31% of one CPU core. This is an observation, not a cross-device resource guarantee.
+
+A Windows Actions workflow is provided at [`docs/ci-windows.yml`](docs/ci-windows.yml). Move it to `.github/workflows/ci.yml` using a GitHub credential with workflow permission to enable hosted CI. The publishing credential for the initial release could publish source and releases but not register workflows; checks above were run locally.
+
 Useful development arguments: `--background`, `--no-track`, `--data-dir <folder>`, and `--port <number>`. Alternate ports are for testing; the shipped browser extension uses 43127.
 
 ## Why a new implementation?

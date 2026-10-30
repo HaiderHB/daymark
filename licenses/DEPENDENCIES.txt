@@ -1,0 +1,25 @@
+Daymark itself is MIT licensed. Runtime components retain their own licenses.
+
+.NET runtime / Windows Forms / Microsoft.Data.Sqlite:
+  Copyright .NET Foundation and contributors / Microsoft.
+  MIT. See dotnet-LICENSE.txt and dotnet-THIRD-PARTY-NOTICES.txt.
+  https://github.com/dotnet/runtime
+  https://github.com/dotnet/winforms
+  https://github.com/dotnet/efcore
+
+SQLitePCLRaw:
+  Copyright Eric Sink and contributors.
+  Apache-2.0. See SQLitePCLRaw-LICENSE.txt.
+  https://github.com/ericsink/SQLitePCL.raw
+
+SQLite native library:
+  Public domain. https://www.sqlite.org/copyright.html
+
+Windows SDK .NET projections and WinRT support:
+  Copyright Microsoft Corporation.
+  Windows SDK terms: https://aka.ms/WinSDKLicenseURL
+  C#/WinRT project and license: https://github.com/microsoft/CsWinRT
+
+Development-only tools (not shipped in the app): Playwright, Prettier, xUnit,
+Microsoft.NET.Test.Sdk. Their license information is included in their
+respective npm/NuGet distributions.
